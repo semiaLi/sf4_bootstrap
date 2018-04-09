@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    {% block head %}
+        <head>
+            <meta charset="UTF-8">
+            <title>{% block title %} app.title {% endblock %}</title>
+            {% block stylesheets %}
+                <link rel="stylesheet" href={{ asset('build/css/app.css') }}>
+            {% endblock %}
+            {% block head_favicon %}
+                <link rel="icon" type="" href="{{ asset('bundles/app/preim_icon.jpg') }}" />
+            {% endblock %}
+        </head>
+    {% endblock head %}
+    <body>
+        <div id="wrapper">
+            {% block body %}
+                {% block navbar %}
+                    {% include 'background/navbar.html.twig' %}
+                {% endblock navbar%}
+
+                {% block container %}
+                    <div class="container-fluid">
+                        <div class="row">
+                        {% block sidebar %}
+                            {% include 'background/sidebar.html.twig' %}
+                        {% endblock sidebar %}
+                        {% block page_content %}{% endblock page_content %}
+                        </div>
+                    </div>
+                {% endblock container%}
+            {% endblock %}
+        </div>
+        {% block javascripts %}
+
+            <link src={{ asset('build/js/app.js') }}>{% endblock %}
+    </body>
+</html>

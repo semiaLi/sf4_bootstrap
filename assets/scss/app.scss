@@ -1,0 +1,48 @@
+$color_list: 'white';
+$color_background: #f7f7f7;
+$navbar_color: #fff;
+$sidebar_color: #65187a;
+$color_written: 'gray';
+$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
+//$fa-font-path: "~font-awesome/fonts";
+
+@import '~bootstrap-sass/assets/stylesheets/bootstrap';
+
+body {
+  background-color: $color_background;
+  color: $color_written;
+  .float-left {
+    float: left;
+  }
+  .float-right {
+    float: right;
+  }
+  .navbar {
+    margin: 0;
+    background-color: $navbar_color ;
+  }
+  .sidebar {
+      background-color: $sidebar_color;
+     ul {
+       li{
+         a, a:hover {
+             background: none;
+         }
+       }
+     }
+  }
+  nav {
+    .breadcrumb {
+      li, li>a {
+        color: lightgray;
+      }
+      .active {
+        color: deeppink;
+      }
+    }
+  }
+
+  .mainPage{
+    margin-top: 2%;
+  }
+}

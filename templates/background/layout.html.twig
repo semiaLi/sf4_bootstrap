@@ -1,0 +1,24 @@
+{% extends '/background/base.html.twig' %}
+{% block page_content %}
+    <div id="page-content-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-10 mainPage">
+                    <nav aria-label="breadcrumb">
+                        {% block  breadcrumb %}
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Library</li>
+                            </ol>
+                        {% endblock breadcrumb %}
+                    </nav>
+                    <div class="page_heart">
+                        {% block  page_heart %}
+
+                        {% endblock page_heart %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock page_content %}
